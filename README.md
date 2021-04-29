@@ -12,6 +12,7 @@ Wiki documenting the CBRG cluster setup
     - Transfering files 
     - Finding my quota
     - Shared genome repos 
+- shared folder -> change permissions with chmod 770 ( 777 does not work)
 
 ## Running CGAT pipelines
 
