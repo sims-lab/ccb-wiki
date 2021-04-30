@@ -29,7 +29,7 @@ Wiki documenting the CBRG cluster setup
          - Lucy - this is what I have been doing: srun -p batch --cpus-per-task=5 --mem-per-cpu=10G --pty bash -i
        ```
     - Loading modules 
-    - (Hosting public files / hubs)[public_trackhubs]
+    - [Hosting public files / hubs](./public_trackhubs)
     - Transfering files 
     - Finding my quota
     - Shared genome repos 
