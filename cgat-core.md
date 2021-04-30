@@ -6,4 +6,4 @@ cluster:
   queue: batch
 ```
 
-NOTE This is a hidden file with `.cgat.yml` `cgat.yml` will not work! 
+**NOTE:** This is a hidden file with `.cgat.yml`; `cgat.yml` will not work! 
