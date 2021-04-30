@@ -1,0 +1,36 @@
+Good afternoon,
+ 
+We're pleased to announce that we have successfully built a replacement for the /public file system which was previously exported via the website userweb.molbiol.ox.ac.uk. We recommend that you read this e-mail carefully.
+ 
+The new service is called datashare and has two components.
+ 
+The file system /datashare
+This can be written to and read on the login nodes and read (but not written to) on any of the cluster nodes
+It is not part of /t1-data
+Every active user account has a directory at /datashare/user_name
+Every collaboration project additionally has a directory at /datashare/project/project_name that any member of the project can write to
+There is a 100G quota per user account
+If you find that you need additional space please contact us via genmail@molbiol.ox.ac.uk so that we can consider your request
+please note that it is not possible to allocate quota to projects
+To make data publicly available via the web server, simply copy the data into the /datashare area
+Please note that you cannot use symlinks to point to /t1-data
+The website is datashare.molbiol.ox.ac.uk
+Your user data will appear at datashare.molbiol.ox.ac.uk/public/user_name/
+Project data will appear at datashare.molbiol.ox.ac.uk/public/project/project_name/
+It is not possible to customise web server configuration using htaccess files
+If you have a need of advanced features please contact us via genmail@molbiol.ox.ac.uk
+ 
+For backwards compatibility purposes, the web address userweb.molbiol.ox.ac.uk will be redirected to point to the new service next week. To ensure that your old links continue to work, please copy the necessary files into their equivalent locations in /datashare. For example, a file currently at /public/auser/myBigWig.bw should be copied to /datashare/auser/myBigWig.bw
+ 
+If you have any questions or problems please contact us via genmail@molbiol.ox.ac.uk
+ 
+Yours,
+ 
+The CCB Team
+ 
+--
+Dr Duncan Tooke | Research Cluster Administrator
+Centre for Computational Biology, Weatherall Institute of Molecular Medicine,
+University of Oxford, OX3 9DS
+www.imm.ox.ac.uk
+ 
