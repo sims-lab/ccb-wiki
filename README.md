@@ -26,7 +26,7 @@ Wiki documenting the CBRG cluster setup
                 -  if it's too big for them then run it on the large login node (cbrglogin3), 
                 -  and if it's too big for *that* then just deal with it and run it as a batch job.
           
-         - Lucy - this is what I have been doing: srun -p batch --cpus-per-task=12 --mem-per-cpu=32G --pty bash -i
+         - Lucy - this is what I have been doing: srun -p batch --cpus-per-task=5 --mem-per-cpu=10G --pty bash -i
        ```
 
     - Loading modules 
