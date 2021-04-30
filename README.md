@@ -15,13 +15,18 @@ Wiki documenting the CBRG cluster setup
         - for general use `batch` 
 
       - qrsh 
-       ```From Ewan:  you can do:
+         ```From Ewan:  you can do:
 
-               $ srun --pty bash
+                 $ srun --pty bash
 
-              which also takes all the usual parameters that squeue does for allocating memory and so forth. However, while you can do it if absolutely necessary or just for teaching purposes, in practice we don't generally recommend people do it 'for real' on our system - our usual MO is to run stuff on the normal interactive login nodes (cbrglogin1 or cbrglogin2), if it's too big for them then run it on the large login node (cbrglogin3), and if it's too big for *that* then just deal with it and run it as a batch job.
-     ```
-     
+                which also takes all the usual parameters that squeue does for allocating memory
+                and so forth. However, while you can do it if absolutely necessary or just for teaching purposes
+                , in practice we don't generally recommend people do it 'for real' on our system 
+                - our usual MO is to run stuff on the normal interactive login nodes (cbrglogin1 or cbrglogin2),
+                -  if it's too big for them then run it on the large login node (cbrglogin3), 
+                -  and if it's too big for *that* then just deal with it and run it as a batch job.
+       ```
+
     - Loading modules 
     - Hosting public files / hubs 
     - Transfering files 
