@@ -35,6 +35,21 @@ Wiki documenting the CBRG cluster setup
     - Shared genome repos 
 - shared folder -> change permissions with chmod 770 ( 777 does not work)
 
+## Setting up conda environments 
+
+  - Where to put them:
+    - /t1-data/home/ = faster loading but limited to 20G - this will be too small maybe for most users but it is backed up
+    - /t1-data/user/<username>  = better for large conda envs = This more recommened. 
+
+  - exporting conda envs yml files 
+    - if you are transfering conda envs from other systems use 
+      - `conda env export --no-builds > environment_nobuild.yml`
+    - other useful things to export and backup
+      - `conda env export > environment.yml` = full env details, version and hash code for software build 
+      - `conda env export --from-history > env_history.yml` = gives you just the main things you asked for (not all the dependencies) 
+      - `conda list --revisions > env_revisions.txt` = the order and date you installed extra packages 
+      - `conda list --explicit > proj095_list_explicit.txt` = really thourgh list of exactly what you had in your environment 
+
 ## Running CGAT pipelines
 
 - [Set up DRMAA](./DRMAA.md)
