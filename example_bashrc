@@ -1,0 +1,36 @@
+# .bashrc
+
+# Source global definitions from system bashrc file
+if [ -f /etc/bashrc ]; then
+ . /etc/bashrc
+fi
+
+# Set umask for default file permissions
+umask 002
+
+### Load environment modules
+
+# Load the latest version of Git (system version is old)
+module load git/2.31.1
+
+
+### You might want to source you conda.sh script here - do not activate it! 
+### do not activate your conda  in .bashrc - use alias to load in 
+## source /path/to/conda/etc/profile.d/conda.sh
+
+### Set environment variables
+
+# Set DRMAA path for Ruffus / cgatcore pipelines to talk to slurm
+export DRMAA_LIBRARY_PATH=/usr/lib64/libdrmaa.so
+
+# Set temporary folders for Ruffus / cgatcore pipelines
+export TMPDIR=/tmp
+export SHARED_TMPDIR=/t1-data/user/${USER}/tmp
+
+### User defined aliases (shortcuts)
+
+# change to OBDS course folder
+alias obds='cd /t1-data/project/obds/may21 && pwd && ls'
+alias load_env='conda activate base && conda activate cgat-f'
+
+
