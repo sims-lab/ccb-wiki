@@ -9,14 +9,18 @@ fi
 umask 002
 
 ### Load environment modules
-
 # Load the latest version of Git (system version is old)
 module load git/2.31.1
 
+# remove /usr/condabin from path - to enable conda to work correctly
+PATH=$(echo "$PATH" | sed -e 's/\/usr\/condabin://')
 
-### You might want to source you conda.sh script here - do not activate it! 
-### do not activate your conda  in .bashrc - use alias to load in 
-## source /path/to/conda/etc/profile.d/conda.sh
+# unset python path
+unset PYTHONPATH
+
+### source conda
+source  /t1-data/home/c/cgeorge/2_conda/centos7/etc/profile.d/conda.sh
+conda activate base
 
 ### Set environment variables
 
@@ -30,7 +34,6 @@ export SHARED_TMPDIR=/t1-data/user/${USER}/tmp
 ### User defined aliases (shortcuts)
 
 # change to OBDS course folder
-alias obds='cd /t1-data/project/obds/may21 && pwd && ls'
-alias load_env='conda activate base && conda activate cgat-f'
-
-
+alias env='conda activate base' 
+alias cg='cd /t1-data/user/cgeorge'
+alias pj='cd /t1-data/project/sims-lab/'
