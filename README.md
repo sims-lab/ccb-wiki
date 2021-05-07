@@ -38,11 +38,13 @@ Wiki documenting the CBRG cluster setup
 ## Setting up conda environments 
 
   - Where to put them:
-    - /t1-data/home/ = faster loading but limited to 20G - this will be too small maybe for most users but it is backed up
-    - /t1-data/user/<username>  = better for large conda envs = This is more recommened. 
+    - /t1-data/home/ = faster loading but limited to 20G - this will be too small maybe for most users but it is backed up - cn ask for quota to be increased if needed. 
+    - It is not currently recommented to have envs in /t1-data/user/<username> as conda metadata is taking up too much space.  
 
   - Note - recommended to source conda.sh in bashrc automatically but activate environments using alias once you are on the cluster as they can interfer with remote destop usage and take ages to load. 
 
+  - [guide to installing conda on CCB cluster](https://github.com/OBDS-Training/Conda_Workshops/blob/master/1_Conda_intro_CCB.md)
+  
   - exporting conda envs yml files 
     - if you are transfering conda envs from other systems use 
       - `conda env export --no-builds > environment_nobuild.yml`
