@@ -1,4 +1,4 @@
-# cbrg-wiki
+# ccb-wiki
 
 Wiki documenting the CBRG cluster setup
 
