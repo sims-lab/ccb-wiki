@@ -5,35 +5,45 @@ if [ -f /etc/bashrc ]; then
  . /etc/bashrc
 fi
 
-# Set umask for default file permissions
-umask 002
+# Non-interactive shells inherit the path and other variables
+# from the calling shell, so this setup is not needed.
+# prevents conda env being reset when calling P.run()
+if [[ $PS1 ]]; then
 
-### Load environment modules
-# Load the latest version of Git (system version is old)
-module load git/2.31.1
+    # Set umask for default file permissions
+    umask 002
 
-# remove /usr/condabin from path - to enable conda to work correctly
-PATH=$(echo "$PATH" | sed -e 's/\/usr\/condabin://')
+    ### Load environment modules
+    # Load the latest version of Git (system version is old)
+    module load git/2.31.1
 
-# unset python path
-unset PYTHONPATH
+    # remove usr/condabin from path
+    PATH=$(echo "$PATH" | sed -e 's/\/usr\/condabin://')
 
-### source conda
-source  /t1-data/home/c/cgeorge/2_conda/centos7/etc/profile.d/conda.sh
-conda activate base
+    # unset python path
+    unset PYTHONPATH
 
-### Set environment variables
+    ### source conda
+    #source  /t1-data/user/cgeorge/2_conda/centos7/etc/profile.d/conda.sh
+    source ~/conda/obds_conda/etc/profile.d/conda.sh
+    conda activate base
 
-# Set DRMAA path for Ruffus / cgatcore pipelines to talk to slurm
-export DRMAA_LIBRARY_PATH=/usr/lib64/libdrmaa.so
+    ### Set environment variables
 
-# Set temporary folders for Ruffus / cgatcore pipelines
-export TMPDIR=/tmp
-export SHARED_TMPDIR=/t1-data/user/${USER}/tmp
+    # Set DRMAA path for Ruffus / cgatcore pipelines to talk to slurm
+    export DRMAA_LIBRARY_PATH=/usr/lib64/libdrmaa.so
+
+    # Set temporary folders for Ruffus / cgatcore pipelines
+    export TMPDIR=/tmp
+    export SHARED_TMPDIR=/t1-data/user/${USER}/tmp
+
+fi # if PS1
 
 ### User defined aliases (shortcuts)
 
 # change to OBDS course folder
-alias env='conda activate base' 
+alias obds='cd /t1-data/project/obds/ && pwd && ls'
+
+alias env='conda activate base'
 alias cg='cd /t1-data/user/cgeorge'
 alias pj='cd /t1-data/project/sims-lab/'
