@@ -13,6 +13,10 @@ Wiki documenting the CBRG cluster setup
       - see queues = `sinfo`
         - for training use `teaching`
         - for general use `batch` 
+      - You can check how much your requesting using `squeue --me  -o "%.18i %.9P %.8j %.8u %.2t %.10M %.6D %R %
+C %d %D %A %H %J %m %S %z %Z"`
+          - This explains the different fields https://slurm.schedmd.com/squeue.html
+          - %S details the time it thinks your job will start running
 
       - qrsh 
          ```From Ewan:  you can do:
