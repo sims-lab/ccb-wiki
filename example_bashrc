@@ -27,6 +27,10 @@ if [[ $PS1 ]]; then
     #source  /t1-data/user/cgeorge/2_conda/centos7/etc/profile.d/conda.sh
     source ~/conda/obds_conda/etc/profile.d/conda.sh
     conda activate base
+    
+    ## fix to get conda to pick up environments properly  https://github.com/conda/conda/issues/9392
+    conda deactivate
+    conda activate base
 
     ### Set environment variables
 
