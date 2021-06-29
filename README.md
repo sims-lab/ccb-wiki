@@ -63,7 +63,7 @@ Wiki documenting the CBRG cluster setup
   
   
   - **Exporting conda envs yml files:**
-    - Find a script to automate it here: (./export_conda_envs.py) 
+    - Find a script to automate it here: [export_conda_envs.py](./export_conda_envs.py) 
     - if you are transfering conda envs from other systems use 
       - `conda env export --no-builds > environment_nobuild.yml`
     - other useful things to export and backup
