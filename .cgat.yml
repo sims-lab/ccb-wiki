@@ -1,0 +1,5 @@
+cluster:
+    queue: batch
+    queue_manager: slurm
+tmpdir: /tmp
+
