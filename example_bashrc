@@ -24,7 +24,6 @@ if [[ $PS1 ]]; then
     unset PYTHONPATH
 
     ### source conda
-    #source  /t1-data/user/cgeorge/2_conda/centos7/etc/profile.d/conda.sh
     source ~/conda/obds_conda/etc/profile.d/conda.sh
     conda activate base
     
