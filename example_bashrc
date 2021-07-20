@@ -48,5 +48,5 @@ fi # if PS1
 alias obds='cd /t1-data/project/obds/ && pwd && ls'
 
 alias env='conda activate base'
-alias cg='cd /t1-data/user/cgeorge'
-alias pj='cd /t1-data/project/sims-lab/'
+
+
